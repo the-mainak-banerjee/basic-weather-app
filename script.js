@@ -30,7 +30,8 @@ function showData(data){
         <figure>
             <img src="${icon}" alt="logo" class="cityIcon">
             <figcaption class="iconCaption">${data.weather[0]["description"]}</figcaption>
-        </figure>`
+        </figure>
+        <div class="cityHumidity">Humidity: ${data.main["humidity"]}</div>`
         li.innerHTML = markUp;
         cities.insertAdjacentElement("afterbegin", li)
         userCity.value = "";
