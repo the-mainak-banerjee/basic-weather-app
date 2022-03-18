@@ -1,0 +1,222 @@
+:root{
+    --primary-color: #091F43;
+    --secondary-color: #fc2323;
+    --ternary-color: #be1818 ;
+    --font-light: #ffffff;
+    --font-lighter: #585858;
+    --background-color: rgb(214, 214, 214);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+button{
+    cursor: pointer;
+}
+
+.hideElement{
+    display: none;
+}
+
+body{
+    background-color: var(--primary-color);
+    padding: 50px;
+}
+
+form input, button {
+    border: none;
+    outline: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Individual Section Style */
+
+/* Hero Section */
+
+.formSection{
+    color: var(--font-light);
+    margin: 0px auto;
+    max-width: 50vw;
+}
+
+.heading{
+    font-weight: bold;
+    font-size: 5rem;
+    padding-bottom: 30px;
+}
+
+.theForm{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.userCity{
+    background: none;
+    color: var(--font-light);
+    border-bottom: 1px solid var(--font-light);
+    font-size: 1.8rem;
+    height: 40px;
+    padding: 5px 5px 10px;
+}
+
+.userCity::placeholder{
+    color: var(--font-lighter);
+}
+
+.btn{
+    background-color: var(--secondary-color);
+    color: var(--font-light);
+    padding: 10px 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    background-color: var(--ternary-color) ;
+}
+
+.errMsg{
+    position: absolute;
+    left: 5px;
+    bottom: -50px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    min-height: 40%;
+}
+
+/* Result Section Style */
+
+.resultSection{
+    margin: 100px auto;
+    max-width: fit-content;
+}
+
+.cities{
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
+    color: white;
+}
+
+.city{
+    background-color: var(--font-light);
+    color: var(--font-lighter);
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px var(--font-lighter);
+}
+
+.cityName{
+    font-size: 2em;
+}
+
+.cityName sup{
+    background-color: var(--secondary-color);
+    color: var(--font-light);
+    border-radius: 30px;
+    padding: 0.2em 0.6em;
+    font-size: 0.5em;
+    text-transform: uppercase;
+    margin-left: 2.5px;
+}
+
+.cityTemp{
+    font-size: 4em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.cityTemp sup{
+    font-size: 0.5em;
+}
+
+.cityIcon{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.iconCaption{
+    font-size: 1em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    letter-spacing: 0.25em;
+}
+
+@media screen and (max-width: 1000px){
+
+    /* Hero Section */
+    .formSection{
+        max-width: fit-content;
+    }
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .theForm{
+        flex-direction: column;
+    }
+
+    /* Result Section */
+    .cities{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px){
+
+    /* Hero Section */
+    .formSection{
+        max-width: fit-content;
+    }
+
+    .heading{
+        font-size: 2.5rem;
+    }
+
+    .theForm{
+        flex-direction: column;
+    }
+
+    .userCity{
+        font-size: 1.5rem;
+    }
+    
+    .userCity, .btn{
+        width: 100%;
+    }
+    .btn{
+        margin: 15px 0px 10px 0px;
+    }
+    .errMsg{
+        position: static;
+        margin-top: 20px;
+        min-height: 0px;
+    }
+
+    /* Result Section */
+    .cities{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px){
+
+    /* Result Section */
+    .cities{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
