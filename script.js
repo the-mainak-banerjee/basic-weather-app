@@ -32,9 +32,8 @@ function showData(data){
             <figcaption class="iconCaption">${data.weather[0]["description"]}</figcaption>
         </figure>`
         li.innerHTML = markUp;
-        cities.appendChild(li)
+        cities.insertAdjacentElement("afterbegin", li)
         userCity.value = "";
-        userCity.focus();
 }
 
 
